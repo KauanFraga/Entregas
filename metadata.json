@@ -1,0 +1,7 @@
+{
+  "name": "VoltLogística - Controle de Entregas",
+  "description": "Sistema de controle de entregas para loja de materiais elétricos com dashboard interativo e mapas.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
