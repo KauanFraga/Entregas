@@ -4,52 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>VoltLogística</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRSq550="
-      crossorigin=""
-    />
-    <style>
-      /* Custom scrollbar for a cleaner industrial look */
-      ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
+    <!-- Leaflet CSS via CDN para garantir carregamento sem erros de build -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    
+    <script type="importmap">
+    {
+      "imports": {
+        "vite": "https://aistudiocdn.com/vite@^7.2.4",
+        "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
+        "leaflet": "https://aistudiocdn.com/leaflet@^1.9.4",
+        "leaflet/": "https://aistudiocdn.com/leaflet@^1.9.4/",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+        "react-leaflet": "https://aistudiocdn.com/react-leaflet@^5.0.0"
       }
-      ::-webkit-scrollbar-track {
-        background: #f1f5f9;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #cbd5e1;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #94a3b8;
-      }
-      /* Leaflet Container Fix */
-      .leaflet-container {
-        width: 100%;
-        height: 100%;
-        z-index: 10;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "leaflet": "https://aistudiocdn.com/leaflet@^1.9.4",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react-leaflet": "https://aistudiocdn.com/react-leaflet@^5.0.0",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
-    "vite": "https://aistudiocdn.com/vite@^7.2.4"
-  }
-}
-</script>
-</head>
+    }
+    </script>
+  </head>
   <body class="bg-slate-50 text-slate-900 font-sans antialiased overflow-hidden">
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
