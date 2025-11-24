@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Delivery, DeliveryListProps } from '../types';
+import { DeliveryListProps } from '../types';
 import DeliveryCard from './DeliveryCard';
 import { PackageX, Map, Check } from 'lucide-react';
 
